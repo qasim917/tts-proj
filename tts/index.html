@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - The Times School</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1a252f;
+            color: white;
+        }
+
+        nav {
+            background-color: #101820;
+            color: white;
+            padding: 20px 20px; /* Increased padding for a bigger navbar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav .logo h1 {
+            font-size: 22px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+            background: linear-gradient(to bottom, #101820, #34495e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .slider .quote {
+            position: absolute;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideIn 10s infinite;
+            transition: opacity 1s, transform 1s;
+        }
+
+        @keyframes slideIn {
+            0%, 100% { opacity: 0; transform: translateY(50px); }
+            10%, 90% { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #2c3e50;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #ecf0f1;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #bdc3c7;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #34495e;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #1abc9c;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #16a085;
+        }
+
+        .about-section,
+        .contact-section {
+            margin-top: 20px;
+        }
+
+        .about-section h3,
+        .contact-section h3 {
+            color: #ecf0f1;
+            margin-bottom: 10px;
+        }
+
+        .contact-details {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-details li {
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bdc3c7;
+            background-color: #101820;
+            padding: 10px 0;
+        }
+
+        .footer a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://thetimesschool.edu.pk/wp-content/uploads/2020/02/logo-2b-1.png" alt="The Times School Logo">
+            <h1>The Times School</h1>
+        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#application">Application</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="slider">
+        <div class="quote">Welcome to The Times School - Empowering Future Leaders!</div>
+        <div class="quote">"Education is the most powerful weapon which you can use to change the world."</div>
+        <div class="quote">Join us in making excellence a habit.</div>
+    </div>
+
+    <div class="container" id="about">
+        <h2>About The Times School</h2>
+        <p>The Times School is committed to providing quality education and fostering creativity among its students. We organize various competitions and events to encourage participation and excellence.</p>
+    </div>
+
+    <div class="container" id="application">
+        <h2>Application Form</h2>
+        <div class="form-container">
+            <form id="applicationForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="grade">Grade:</label>
+                    <select id="grade" name="grade" required>
+                        <option value="">Select your grade</option>
+                        <option value="Grade 9">Grade 9</option>
+                        <option value="Grade 10">Grade 10</option>
+                        <option value="Grade 11">Grade 11</option>
+                        <option value="Grade 12">Grade 12</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Why do you want to participate? (Optional):</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-section">
+            <h3>Contact Details</h3>
+            <ul class="contact-details">
+                <li><strong>Address:</strong> Tahir Villa Chowrangi, Karachi</li>
+                <li><strong>Email:</strong> info@thetimesschool.edu.pk</li>
+                <li><strong>Phone:</strong> +92-300-1234567</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 The Times School. All rights reserved.</p>
+        <p>Visit us: <a href="https://thetimesschool.edu.pk" target="_blank">thetimesschool.edu.pk</a></p>
+    </footer>
+
+    <script>
+        const quotes = [
+            "Welcome to The Times School - Empowering Future Leaders!",
+            "\"Education is the most powerful weapon which you can use to change the world.\"",
+            "Join us in making excellence a habit.",
+            "Shaping the leaders of tomorrow with the best education.",
+            "Success starts with a strong foundation in knowledge.",
+            "Inspiring minds, creating futures."
+        ];
+
+        let index = 0;
+        const slider = document.querySelector('.slider');
+
+        function changeQuote() {
+            // Remove all previous quotes
+            const allQuotes = document.querySelectorAll('.quote');
+            allQuotes.forEach(quote => quote.remove());
+
+            // Add a new quote
+            const newQuote = document.createElement('div');
+            newQuote.classList.add('quote');
+            newQuote.textContent = quotes[index];
+            slider.appendChild(newQuote);
+
+            // Animate the new quote
+            setTimeout(() => {
+                newQuote.style.opacity = 1;
+                newQuote.style.transform = 'translateY(0)';
+            }, 100);
+
+            index = (index + 1) % quotes.length;
+        }
+
+        changeQuote(); // Initial quote
+        setInterval(changeQuote, 10000); // Change quote every 10 seconds
+    </script>
+</body>
+</html>
